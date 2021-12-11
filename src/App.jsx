@@ -22,18 +22,18 @@ export const App = () => {
   const onClickComplete = (index) => {
     const newIncompleteTodos = [...incompleteTodos];
     newIncompleteTodos.splice(index, 1);
-    setIncompleteTodos(newIncompleteTodos);
 
     const newCompleteTodos = [...completeTodos, incompleteTodos[index]];
+    setIncompleteTodos(newIncompleteTodos);
     setCompleteTodos(newCompleteTodos);
   };
   const onClickBack = (index) => {
     const newCompleteTodos = [...completeTodos];
     newCompleteTodos.splice(index, 1);
-    setIncompleteTodos(newCompleteTodos);
 
     const newIncompleteTodos = [...incompleteTodos, completeTodos[index]];
-    setCompleteTodos(newIncompleteTodos);
+    setCompleteTodos(newCompleteTodos);
+    setIncompleteTodos(newIncompleteTodos);
   };
   return (
     <>
